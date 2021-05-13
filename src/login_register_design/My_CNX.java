@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  */
 public class My_CNX {
 
-    private static String servername = "local instance 3306";
+    private static String servername = "Local instance 3306";
     private static String username = "root";
     private static String dbname  = "users_db";
     private static Integer portnumber  = 3306;
