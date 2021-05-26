@@ -301,17 +301,120 @@ private void jButton_RegisterActionPerformed(java.awt.event.ActionEvent evt) {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        label_border = new javax.swing.JPanel();
+        jLabel_login = new javax.swing.JLabel();
+        jLabel_close = new javax.swing.JLabel();
+        jTextField_Username = new javax.swing.JTextField();
+        jTextField_Fullname = new javax.swing.JTextField();
+        jLabel_minimize = new javax.swing.JLabel();
+        jpanel_title_border = new javax.swing.JPanel();
+        jPasswordField_1 = new javax.swing.JPasswordField();
+        jTextField_Phone = new javax.swing.JTextField();
+        jPasswordField_2 = new javax.swing.JPasswordField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel_login.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel_login.setText("Login");
+
+        jLabel_close.setFont(new java.awt.Font("Lucida Grande", 1, 20)); // NOI18N
+        jLabel_close.setText("X");
+
+        jTextField_Username.setText("jTextField1");
+
+        jTextField_Fullname.setText("jTextField2");
+
+        jLabel_minimize.setFont(new java.awt.Font("Lucida Grande", 1, 20)); // NOI18N
+        jLabel_minimize.setText("-");
+
+        jPasswordField_1.setText("jPasswordField2");
+
+        javax.swing.GroupLayout jpanel_title_borderLayout = new javax.swing.GroupLayout(jpanel_title_border);
+        jpanel_title_border.setLayout(jpanel_title_borderLayout);
+        jpanel_title_borderLayout.setHorizontalGroup(
+            jpanel_title_borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanel_title_borderLayout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addComponent(jPasswordField_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(109, Short.MAX_VALUE))
+        );
+        jpanel_title_borderLayout.setVerticalGroup(
+            jpanel_title_borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpanel_title_borderLayout.createSequentialGroup()
+                .addGap(0, 76, Short.MAX_VALUE)
+                .addComponent(jPasswordField_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jTextField_Phone.setText("jTextField1");
+
+        jPasswordField_2.setText("jPasswordField1");
+
+        javax.swing.GroupLayout label_borderLayout = new javax.swing.GroupLayout(label_border);
+        label_border.setLayout(label_borderLayout);
+        label_borderLayout.setHorizontalGroup(
+            label_borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, label_borderLayout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(jLabel_close)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField_Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(129, 129, 129))
+            .addGroup(label_borderLayout.createSequentialGroup()
+                .addGroup(label_borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jpanel_title_border, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(label_borderLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addGroup(label_borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPasswordField_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(label_borderLayout.createSequentialGroup()
+                                .addComponent(jLabel_minimize)
+                                .addGap(40, 40, 40)
+                                .addComponent(jLabel_login)))))
+                .addGap(0, 2, Short.MAX_VALUE))
+            .addGroup(label_borderLayout.createSequentialGroup()
+                .addGap(95, 95, 95)
+                .addComponent(jTextField_Fullname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTextField_Phone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
+        );
+        label_borderLayout.setVerticalGroup(
+            label_borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(label_borderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpanel_title_border, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPasswordField_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGroup(label_borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_login, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_minimize, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(26, 26, 26)
+                .addGroup(label_borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_close))
+                .addGap(30, 30, 30)
+                .addGroup(label_borderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField_Fullname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_Phone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(24, Short.MAX_VALUE)
+                .addComponent(label_border, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 376, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(label_border, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -353,5 +456,15 @@ private void jButton_RegisterActionPerformed(java.awt.event.ActionEvent evt) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel_close;
+    private javax.swing.JLabel jLabel_login;
+    private javax.swing.JLabel jLabel_minimize;
+    private javax.swing.JPasswordField jPasswordField_1;
+    private javax.swing.JPasswordField jPasswordField_2;
+    private javax.swing.JTextField jTextField_Fullname;
+    private javax.swing.JTextField jTextField_Phone;
+    private javax.swing.JTextField jTextField_Username;
+    private javax.swing.JPanel jpanel_title_border;
+    private javax.swing.JPanel label_border;
     // End of variables declaration//GEN-END:variables
 }
