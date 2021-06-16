@@ -5,6 +5,7 @@
  */
 package login_register_design;
 
+//import com.mysql.cj.xdevapi.Statement;
 import java.awt.Color;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,6 +16,8 @@ import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.border.Border;
+import java.sql.Statement;
+import java.sql.Connection;
 
 /**
  *
@@ -22,6 +25,11 @@ import javax.swing.border.Border;
  */
 public class Login_Form extends javax.swing.JFrame {
 
+    
+    // Make Connection Variable
+    
+    
+    
     /**
      * Creates new form Login_Form
      */
@@ -61,7 +69,7 @@ public class Login_Form extends javax.swing.JFrame {
         jLabel_username.setBorder(label_icons_border);
         jLabel_password.setBorder(label_icons_border);
         
-        // create border for the username and password field
+        // create border for the username and p assword field
         Border field_border = BorderFactory.createMatteBorder(1, 5, 1, 1, Color.white);
         jTextField_Username.setBorder(field_border);
         jPasswordField.setBorder(field_border);
@@ -180,16 +188,16 @@ public class Login_Form extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel_username)
                             .addComponent(jLabel_password))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField_Username)
-                            .addComponent(jPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)))
+                            .addComponent(jPasswordField)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -412,44 +420,43 @@ public class Login_Form extends javax.swing.JFrame {
 
     // button login
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-
+        
         PreparedStatement st;
         ResultSet rs;
-
-        //        get username and password
+        
+        // get the username & password
         String username = jTextField_Username.getText();
         String password = String.valueOf(jPasswordField.getPassword());
-
-        //        Create a select query to check if the username and the password exist in the database
-        String query = "SELECT * FROM 'users' WHERE 'username' = ? AND 'password' = ?";
-
-        //        String connectionString = "jdbc:mysql://localhost/" + dbName + "?user=" + dbUserName + "&password=" + dbPassword + "&useUnicode=true&characterEncoding=UTF-8";
-
+        
+        // create a select query to check if the username and password exist in the database
+        String query = "SELECT * FROM `users` WHERE `username` = ? AND `password` = ?";
+        
         try {
             st = My_CNX.getConnection().prepareStatement(query);
-
+            
             st.setString(1, username);
             st.setString(2, password);
             rs = st.executeQuery();
-
+            
             if(rs.next())
             {
-                //                show a new form
+                // show a new form 
                 Menu_Form form = new Menu_Form();
                 form.setVisible(true);
                 form.pack();
                 form.setLocationRelativeTo(null);
-                //                  close the curent form
+                //close the curent form (login_form)
                 this.dispose();
-
             }else{
-                //               error message
-                JOptionPane.showMessageDialog(null, "Invalid User / Password", "Login Error", 2 );
+                //error message
+                JOptionPane.showMessageDialog(null, "Invalid Username / Password", "Login Error", 2);
             }
+        
         } catch (SQLException ex) {
             Logger.getLogger(Login_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
+        
     }//GEN-LAST:event_btnLoginActionPerformed
     
     // jlabel minimize -> mouse clicked
